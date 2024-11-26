@@ -9,6 +9,7 @@ describe("add", () => {});
 // to translate it into a proper test case we use the 'it' function:
 
 describe("add", () => {
-	it("adds 2 and 2", () => {});
+	it("adds 2 and 2", () => {
+		expect(2 + 2).toBe(4);
+	});
 });
-//
