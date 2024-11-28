@@ -21,13 +21,20 @@ const candies = [
 ];
 
 const searchCandies = (searchStr, maxPrice) => {
-	return candies
-		.filter(
-			(candy) =>
-				candy.name.toLowerCase().startsWith(searchStr.toLowerCase()) &&
-				candy.price < maxPrice
-		)
-		.map((candy) => candy.name);
+	return (
+		candies
+			// .filter() is called on the candies array. It processes each candy in the array and keeps only those that meet both conditions defined in the callback function.
+			.filter(
+				// (candy) => is the callback function provided to .filter(). Each candy is an object (e.g., { name: "Mars", price: 1.49 }) from the candies array.
+				(candy) =>
+					// Converts the candy name & search string to lowercase to make the search case-insensitive. Checks if the candy's name starts with the provided searchStr.
+					candy.name.toLowerCase().startsWith(searchStr.toLowerCase()) &&
+					// Checks if price of the candy is less than maxPrice, && means both conditions must be true.
+					candy.price < maxPrice
+			) // After filtering, only candies that: Start with searchStr, and  Have a price below maxPrice are kept in the resulting array. At this stage, I'd get, ex:  [ { name: 'Mars', price: 1.49 }, { name: 'Maltesers', price: 3.49 } ]
+			// .map() transforms the filtered array. For each candy in the filtered array, .map() extracts and returns only the name property.
+			.map((candy) => candy.name)
+	);
 };
 
 console.log(searchCandies("Ma", 10)); // [ 'Mars', 'Maltesers' ]
