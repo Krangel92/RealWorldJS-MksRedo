@@ -42,3 +42,5 @@ console.log(searchCandies("Ma", 2)); // [ 'Mars' ]
 console.log(searchCandies("S", 10)); // [ 'Skitties', 'Skittles', 'Starburst' ]
 console.log(searchCandies("S", 4)); // [ 'Skitties', 'Skittles' ]
 console.log(searchCandies("ma", 10)); // [ 'Mars', 'Maltesers' ]
+
+module.exports = searchCandies;
