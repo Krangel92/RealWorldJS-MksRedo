@@ -7,4 +7,11 @@ describe("searchCandies", () => {
 	it("returns a list of candy names (lowercased) that start with the searchStr (lowercased) and candy price is less than maxPrice", () => {
 		expect(searchCandies("Ma", 2)).toEqual(["Mars"]);
 	});
+	it("returns a list of candy names (lowercased) that start with the searchStr (lowercased) and candy price is less than maxPrice", () => {
+		expect(searchCandies("S", 10)).toEqual([
+			"Skitties",
+			"Skittles",
+			"Starburst",
+		]);
+	});
 });
