@@ -14,4 +14,7 @@ describe("searchCandies", () => {
 			"Starburst",
 		]);
 	});
+	it("returns a list of candy names (lowercased) that start with the searchStr (lowercased) and candy price is less than maxPrice", () => {
+		expect(searchCandies("S", 4)).toEqual(["Skitties", "Skittles"]);
+	});
 });
