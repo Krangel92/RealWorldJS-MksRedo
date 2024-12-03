@@ -25,3 +25,26 @@ console.log(sale); // [
 //     'the book is 100 dollars',
 //     'the bedsheet is 175 dollars'
 //   ]
+
+// Now we are solving the ex using ARRAY METHOD CHAINING:
+
+const products1 = [
+	{ name: "dress", price: 600 },
+	{ name: "cream", price: 60 },
+	{ name: "book", price: 200 },
+	{ name: "bottle", price: 50 },
+	{ name: "bedsheet", price: 350 },
+];
+
+const sale1 = products1
+	.filter((product) => product.price > 100)
+	.map((product) => `the ${product.name} is ${product.price / 2} dollars`);
+
+console.log(sale1); // [
+//     'the dress is 300 dollars',
+//     'the book is 100 dollars',
+//     'the bedsheet is 175 dollars'
+//   ]
+
+// NOTE:
+// output in both is the same, but chaining array methods makes code more concise.
